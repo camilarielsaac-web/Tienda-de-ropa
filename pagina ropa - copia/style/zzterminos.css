@@ -1,0 +1,52 @@
+/* Estilos para la página de términos y condiciones */
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+h2, h3 {
+    font-family: "Cossette Texte", sans-serif;
+    color: #4f2958;
+    margin-top: 25px;
+}
+
+p{
+    font-family: "Marmelad", sans-serif;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.contenedor{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    min-height: 400px;
+}
+.mora{
+    background-color: #8f489f2e;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.azu{
+    background-color: #5b7c8d2e;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.abjo{
+    background-color: #4f2958;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+}

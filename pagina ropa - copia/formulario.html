@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Formulario de Compra</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/formulario.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Bitter:ital,wght@0,100..900;1,100..900&family=Cossette+Texte:wght@400;700&family=Manrope:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Bitter:ital,wght@0,100..900;1,100..900&family=Bungee&family=Cossette+Texte:wght@400;700&family=Manrope:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!--bootstrap script-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <!--bootstrap icons-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!--css  hoja de estilos-->
+            <link rel="stylesheet" href="style/hoja de estilos1.css">
+            <link rel="stylesheet" href="style/componentes.css">
+   
+    
+        
+    
+</head>
+  <body>
+    <header>
+  <!--Barra de navegación que se mueve, se repite en las paginas-->
+    <div class="sticky-top" id="navbar-container"></div>
+</header>
+  <h2>Formulario de Compra</h2>
+
+  <div id="resumen-tallas" style="background: #afafaf76; padding: 10px; margin-bottom: 20px; border-radius: 5px;">
+    <p><strong>Tallas:</strong></p>
+    <span id="count-M">M: 0</span> | 
+    <span id="count-L">L: 0</span> | 
+    <span id="count-XL">XL: 0</span> |
+    <span id="count-XXL">XXL: 0</span>
+  </div>
+  <div class="contenedor-pago">
+  <form id="form-compra">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" required>
+
+    <label for="telefono" >Número de Teléfono:</label>
+    <input type="tel" id="telefono" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+
+    <label for="departamento">Departamento:</label>
+    <select id="departamento" required>
+      <option value="">Seleccione...</option>
+      <option value="La paz">La Paz</option>
+      <option value="Cochabamba">Cochabamba</option>
+      <option value="Santa Cruz">Santa Cruz</option>
+      <option value="Oruro">Oruro</option>
+      <option value="Potosí">Potosí</option>
+      <option value="Chuquisaca">Chuquisaca</option>
+      <option value="Tarija">Tarija</option>
+      <option value="Beni">Beni</option>
+      <option value="Pando">Pando</option>
+    </select>
+    <div class="btn-group">
+      <button type="submit">Aceptar</button>
+      <button type="button" id="btnAceptar" style="display:none; background-color: #4f2958; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; font-family: 'Marmelad', sans-serif;">Confirmar Compra</button>
+    </div>
+  </form>
+  </div>
+    <div id="resultado"></div>
+
+<!--copiar el footer para todo -->
+  
+      <div id="footer-container"></div>
+ 
+
+
+  
+  <!--js de la barra de nav, el footer y el sticky top-->
+<script src="js/componentes.js"></script>
+
+  <script>
+    // Función para mostrar los clics de las tallas al cargar la página
+    function cargarClics() {
+      const tallas = ['M', 'L', 'XL', 'XXL'];
+      tallas.forEach(t => {
+        const valor = localStorage.getItem("clicks_" + t) || 0;
+        document.getElementById("count-" + t).innerText = t + ": " + valor;
+      });
+    }
+    // Ejecutar al cargar la página
+    document.addEventListener("DOMContentLoaded", cargarClics);
+
+document.getElementById("form-compra").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById("nombre").value;
+      const apellido = document.getElementById("apellido").value;
+      const telefono = document.getElementById("telefono").value;
+      const departamento = document.getElementById("departamento").value;
+
+      // Recuperar datos guardados
+      const precioFinal = localStorage.getItem("totalCompra") || 0; 
+      const cantidad = localStorage.getItem("cantidadCompra") || 0;
+      const talla = localStorage.getItem("tallaCompra") || "No seleccionada";
+
+      // Recuperar clics individuales por talla
+      const clicksM = localStorage.getItem("clicks_M") || 0;
+      const clicksL = localStorage.getItem("clicks_L") || 0;
+      const clicksXL = localStorage.getItem("clicks_XL") || 0;
+      const clicksXXL = localStorage.getItem("clicks_XXL") || 0;
+
+      document.getElementById("resultado").innerHTML =
+        "<p>Cliente: " + nombre + " " + apellido + "</p>" +
+        "<p>Teléfono: " + telefono + "</p>" +
+        "<p>Departamento: " + departamento + "</p>" +
+        "<p>Cantidad: " + cantidad + "</p>" +
+        "<p>Tallas:</p>" +
+        "<ul>" +
+          "<li>Talla M: " + clicksM + " </li>" +
+          "<li>Talla L: " + clicksL + " </li>" +
+          "<li>Talla XL: " + clicksXL + " </li>" +
+          "<li>Talla XXL: " + clicksXXL + "</li>" +
+        "</ul>" +
+        "<p><strong>Precio final: Bs " + precioFinal + "</strong></p>";
+
+      // Mostrar el botón Aceptar después de confirmar
+      document.getElementById("btnAceptar").style.display = "block";
+    });
+
+    // Lógica para el botón Aceptar: Reiniciar todo y volver a la tienda
+    document.getElementById("btnAceptar").addEventListener("click", function() {
+      // 1. Recopilar todos los datos del formulario y del carrito
+      const nombre = document.getElementById("nombre").value;
+      const apellido = document.getElementById("apellido").value;
+      const telefono = document.getElementById("telefono").value;
+      const departamento = document.getElementById("departamento").value;
+      const precioFinal = localStorage.getItem("totalCompra") || 0;
+      const clicksM = localStorage.getItem("clicks_M") || 0;
+      const clicksL = localStorage.getItem("clicks_L") || 0;
+      const clicksXL = localStorage.getItem("clicks_XL") || 0;
+      const clicksXXL = localStorage.getItem("clicks_XXL") || 0;
+
+      // 2. Crear el mensaje formateado para que lo leas fácilmente
+      const mensaje = `*NUEVO PEDIDO - VENTA DE ROPA LA PAZ*\n\n` +
+                      `*Cliente:* ${nombre} ${apellido}\n` +
+                      `*Teléfono:* ${telefono}\n` +
+                      `*Destino:* ${departamento}\n\n` +
+                      `*Detalle de Tallas:*\n` +
+                      `- Talla M: ${clicksM}\n` +
+                      `- Talla L: ${clicksL}\n` +
+                      `- Talla XL: ${clicksXL}\n` +
+                      `- Talla XXL: ${clicksXXL}\n\n` +
+                      `*TOTAL A PAGAR: Bs ${precioFinal}*`;
+
+      // 3. Crear el enlace de WhatsApp y abrirlo
+      const urlWhatsapp = `https://wa.me/59173509394?text=${encodeURIComponent(mensaje)}`;
+      window.open(urlWhatsapp, '_blank');
+
+      localStorage.clear();
+      alert("Pedido generado. Se abrirá WhatsApp para que me envíes la confirmación.");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

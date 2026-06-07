@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <title>Camisacos Leñador con frisa de color plomo con negro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/hoja de estilos para las paginas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Bitter:ital,wght@0,100..900;1,100..900&family=Bungee&family=Cossette+Texte:wght@400;700&family=Manrope:wght@200..800&family=Marmelad&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/componentes.css">
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.getElementById("botonde");
+            if(btn) {
+                btn.addEventListener("click", () => {
+                    btn.classList.add("compra-activa");
+                    setTimeout(() => btn.classList.remove("compra-activa"), 600);
+                });
+            }
+        });
+    </script>
+    <script src="js/calc.js"></script>
+    </head>
+    <body>
+    <header>
+  <!--Barra de navegación que se mueve, se repite en las paginas-->
+    <div class="sticky-top" id="navbar-container"></div>
+ </header>
+        <div class="titulo">
+        <h1>VENTA DE ROPA LA PAZ</h1>
+        </div>
+        <section>
+        <div class="contenedorprinci">
+            <div class="imagenes">
+                <div class="c1">
+                    <img src="fotos/modeloenca1.png">
+                </div>
+                <div class="c1">
+                    <img src="fotos/negre.png">
+
+                </div>
+                <div class="c1">
+                    <img src="fotos/modeloencaalre1.png">
+                
+                </div>
+                <div class="c1">
+                    <img src="fotos/modeloropaalrevez4.png">
+                
+                </div>
+            </div>
+            <div class="letras">
+                <div class="letraa">
+                <p><b>Camisacos Leñador con frisa <br>de color plomo con negro</b></p><br>
+                </div>
+                <div class="precios">
+                <p>Precio:195(bs)</p>
+                <p>Decuento a 180bs por chamarra a partir de las 3 chamarras</p>
+                </div>
+                <div class="sutalla">
+                <p>Seleccione su talla:</p><br>
+                </div>
+            <div class="tallas">
+                <div class="s"><button type="button" class="talla" data-talla="M"><b>M</b></button></div>
+                <div class="m"><button type="button" class="talla" data-talla="L"><b>L</b></button></div>
+                <div class="l"><button type="button" class="talla" data-talla="XL"><b>XL</b></button></div>
+                <div class="xl"><button type="button" class="talla" data-talla="XXL"><b>XXL</b></button></div>
+            </div><br><br>
+            <div class="compra">
+                <button id="botonde">COMPRAR</button>
+            </div>
+            <div id="contador-compras">
+                <p>Cantidad: <span id="cantidad">0</span></p>
+                <p>Talla: <span id="tipo">-</span></p>
+                <p>Total: Bs <span id="total">0</span></p>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <a href="formulario.html" id="linkConfirmar"><div class="confir"><p>Confirmar Compra(s)</p></div></a>
+                <button id="btnAceptar" class="confir" style="display:none; height: 50px; border: 2px solid #898888; margin-top: 15px; cursor: pointer;">Aceptar</button>
+            </div>
+            </div>
+        </div>
+        </section>
+        <br>
+        <br>
+        <footer>
+        <div class="abjo">
+        <p>© 2026 VENTA DE ROPA LA PAZ - Bolivia</p>
+        <p>Tel: +591 73509394</p>
+        <a href="politica y privacidad.html">Política de privacidad</a><br>
+        <a href="Termino y condiciones.html">Términos y condiciones</a><br>
+        <a href="Politica de envios.html">Politica de envios</a>
+        </div>
+        </footer>
+        <script src="js/zoom.js"></script>
+    </body>
+</html>
