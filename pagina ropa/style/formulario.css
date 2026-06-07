@@ -1,0 +1,62 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #resumen-tallas{
+      font-family: "Cossette Texte", sans-serif;
+    }
+    /* Contenedor principal para alinear el formulario y el QR lado a lado */
+    .contenedor-pago {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    
+    }
+    form { /* El formulario ahora tendrá un ancho máximo de 600px */
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      padding: 20px;
+      border: 2px solid #4f2958;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .qr{
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      display: none; /* Oculto inicialmente */
+      object-fit: contain;
+    }
+    #form-compra{
+      font-family: "Marmelad", sans-serif;
+    }
+    #departmento{
+      font-family: "Cossette Texte", sans-serif;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
