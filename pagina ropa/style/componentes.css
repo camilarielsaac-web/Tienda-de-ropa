@@ -2,11 +2,11 @@ nav{
     font-family: "Cossette Texte", sans-serif;
 }
 nav ul{
-    background-color:#66b6ab;
+    background-color:#2d2d2d;
     list-style: none;
     padding:0;
     margin:0;
-    border-bottom:2px solid aliceblue;
+    border-bottom:2px solid rgb(255, 255, 255);
     display: flex;
     justify-content: center;
 }
@@ -20,7 +20,7 @@ nav a {
     display: block;
 }
 nav a:hover{
-    background-color: #66b6ab;
+    background-color: #2d2d2d;
     transition: all 0.3s ease-in-out;
 }
 
@@ -45,8 +45,8 @@ height:auto;
     
 }
 .mi-navbar{
-    background-color: #66b6ab;
-    border-bottom: 2px solid #66b6ab;
+    background-color: #2d2d2d;
+    border-bottom: 2px solid #2d2d2d;
 }
 .mi-navbar .nav-link,
 .mi-navbar .navbar-brand{
@@ -57,7 +57,7 @@ height:auto;
     .form-control {
         background: transparent;
         border: none;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgb(255, 255, 255);
         border-radius: 0;
         box-shadow: none;
         transition: all 0.3s ease;
@@ -80,19 +80,22 @@ height:auto;
     z-index: 2000;
     margin-top: 8px;
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px white;
     border-radius: 10px;
 }
 
 
 .mi-menu:hover{
-color: rgb(222, 223, 223);
-background-color: #66b6ab;
-transition: all 0.5s ease;
- transform: scale(1.15);
+    color: rgb(222, 223, 223);
+    background-color: #2d2d2d;
+    transition: all 0.5s ease;
+    transform: scale(1.15);
+   
 }
 .mi-menu {
     position: relative;
+        border-bottom: 2px solid rgb(0, 0, 0) ;
+       
 }
 
 .mi-menu::after {
@@ -115,9 +118,9 @@ transition: all 0.5s ease;
     display: block;
 }
 .dropdown-menu {
-    background-color: #7cc9bf;
+    background-color: #2d2d2d;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25)
     
 }
 .dropdown-item {
@@ -126,7 +129,7 @@ transition: all 0.5s ease;
     transition: all 0.3s ease;
 }
 .dropdown-item:hover {
-    background-color: #7cc9bf!important;
+    background-color: #2d2d2d!important;
     color: white;
      transform: translateY(-5px);
 }
@@ -160,7 +163,7 @@ transition: all 0.5s ease;
 footer{
     bottom: 0%;
     font-family: "Cossette Texte", sans-serif;
-     background-color: #112c28;
+     background-color: #363636;
     color: white !important;
     display: flex;
     flex-direction: column;
@@ -173,12 +176,10 @@ footer a{
     padding: 0 ;
 }
 footer a:link{
-    color:aliceblue !important;
+    color:#d0d0d0  !important;
 }
-footer a:visited{
-    color:#fffec7 !important;
-}
+
 footer .text-muted{
-    color: #d9d9d9 !important;
+    color: #d0d0d0 !important;
 }
 
