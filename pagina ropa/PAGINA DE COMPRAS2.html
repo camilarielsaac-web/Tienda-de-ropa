@@ -1,97 +1,379 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-    <title>Camisacos Leñador con frisa de color rojo con negro</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/hoja de estilos para las paginas.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Bitter:ital,wght@0,100..900;1,100..900&family=Bungee&family=Cossette+Texte:wght@400;700&family=Manrope:wght@200..800&family=Marmelad&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/componentes.css">
+        <title>Camisacos Leñador con frisa de color plomo con negro</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const btn = document.getElementById("botonde");
-            if(btn) {
-                btn.addEventListener("click", () => {
-                    btn.classList.add("compra-activa");
-                    setTimeout(() => btn.classList.remove("compra-activa"), 600);
-                });
-            }
-        });
-    </script>
-    <script src="js/calc.js"></script>
+        <!-- Bootstrap y Scripts -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="https://fontawesome.com" crossorigin="anonymous"></script>
+
+        <!-- Enlaces a fuentes -->
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=BioRhyme:wght@200..800&family=Bitter:ital,wght@0,100..900;1,100..900&family=Bungee&family=Cossette+Texte:wght@400;700&family=Manrope:wght@200..800&family=Marmelad&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        
+        <!-- Enlaces a tus hojas de estilo -->
+        <link rel="stylesheet" href="style/hoja de estilos1.css"> <!-- Estilos del Navbar y Footer -->
+        <link rel="stylesheet" href="style/componentes.css">
+        <link rel="stylesheet" href="style/compras.css"> <!-- Estilos Grises del Producto -->
+            
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const btn = document.getElementById("botonde");
+                if(btn) {
+                    btn.addEventListener("click", () => {
+                        btn.classList.add("compra-activa");
+                        setTimeout(() => btn.classList.remove("compra-activa"), 600);
+                    });
+                }
+            });
+        </script>
+        <script src="js/calc.js"></script>
     </head>
     <body>
+        
         <header>
-  <!--Barra de navegación que se mueve, se repite en las paginas-->
-    <div class="sticky-top" id="navbar-container"></div>
-</header>
-        <div class="titulo">
-        <h1>VENTA DE ROPA LA PAZ</h1>
-        </div>
-        <section>
-        <div class="contenedorprinci">
-            <div class="imagenes">
-                <div class="c1">
-                    <img src="fotos/modeloenca4.png">
-                </div>
-                <div class="c1">
-                    <img src="fotos/rojo.png">
+            <div class="lema">
+                Tu confianza es nuestra prioridad en cada entrega
+            </div>
+        </header>
+        
+        <div class="sticky-top">
+            <nav class="navbar navbar-expand-lg mi-navbar">
+                <div class="container-fluid">
+                    <div class="row w-100 align-items-center">
+                        <div class="col-2 d-flex justify-content-center">
+                            <form class="d-none d-lg-flex " role="search">
+                                <button class="btn btn-outline-success" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                                <input class="form-control me-2" type="search" placeholder="Search">
+                            </form>
+                            <button class="btn d-lg-none p-0" type="button" id="btnSearch">
+                                <i class="bi bi-search"></i>
+                            </button>
+                             <input type="search" class="form-control d-lg-none d-none search-mobile" id="mobileSearch" placeholder="Search">
+                        </div>
+                        <div class="col-2"></div>
 
+                        <!--nombre y logo-->
+                        <div class="col-4 text-center">
+                            <a class="navbar-brand" href="#">
+                                <img src="data:image/png;base64,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" class="d-inline-block align-text-top" alt="Logo" style="max-height: 30px; width: auto;">
+                                <span class="d-none d-lg-inline">NORDICO</span>
+                            </a>
+                        </div>
+                        
+                        <div class="col-4 text-end">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                            <i class="bi bi-person-circle" style="font-size: 24px;"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-subtract" style="font-size: 25px;"></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Cupones</a></li>
+                                            <li><a class="dropdown-item" href="#">Black Friday</a></li>
+                                            <li><a class="dropdown-item" href="#">Extras</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="bi bi-bell-fill" style="font-size: 25px;"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="bi bi-receipt" style="font-size: 25px;"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="c1">
-                    <img src="fotos/modeloencaalre4.png">
-                
-                </div>
-                <div class="c1">
-                    <img src="fotos/modeloropaalrevez2.png">
-                
-                </div>
-            </div>
-            <div class="letras">
-                <div class="letraa">
-                <p><b>Camisacos Leñador con frisa <br>de color rojo con negro</b></p><br>
-                </div>
-                <div class="precios">
-                <p>Precio:195(bs)</p>
-                <p>Decuento a 180bs por chamarra a partir de las 3 chamarras</p>
-                </div>
-                <div class="sutalla">
-                <p>Seleccione su talla:</p><br>
-                </div>
-            <div class="tallas">
-                <div class="s"><button type="button" class="talla" data-talla="M"><b>M</b></button></div>
-                <div class="m"><button type="button" class="talla" data-talla="L"><b>L</b></button></div>
-                <div class="l"><button type="button" class="talla" data-talla="XL"><b>XL</b></button></div>
-                <div class="xl"><button type="button" class="talla" data-talla="XXL"><b>XXL</b></button></div>
-            </div><br><br>
-            <div class="compra">
-                <button id="botonde">COMPRAR</button>
-            </div>
-            <div id="contador-compras">
-                <p>Cantidad: <span id="cantidad">0</span></p>
-                <p>Talla: <span id="tipo">-</span></p>
-                <p>Total: Bs <span id="total">0</span></p>
-            </div>
-            <div style="display: flex; gap: 10px; align-items: center;">
-                <a href="formulario.html" id="linkConfirmar"><div class="confir"><p>Confirmar Compra(s)</p></div></a>
-                <button id="btnAceptar" class="confir" style="display:none; height: 50px; border: 2px solid #898888; margin-top: 15px; cursor: pointer;">Aceptar</button>
-            </div>
-            </div>
+            </nav>
+            <nav sticky-top>
+                <ul class="menu" style="color:aliceblue">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">SACOS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Color</a></li>
+                            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                            <li><a class="dropdown-item" href="#">Tallas</a></li>
+                        </ul>   
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">CAMISAS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Color</a></li>
+                            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                            <li><a class="dropdown-item" href="#">Tallas</a></li>
+                        </ul>   
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">VESTIDOS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Color</a></li>
+                            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                            <li><a class="dropdown-item" href="#">Tallas</a></li>
+                        </ul>   
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">MOCHILAS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Color</a></li>
+                            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                            <li><a class="dropdown-item" href="#">Tallas</a></li>
+                        </ul>   
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">MEDIAS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Color</a></li>
+                            <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                            <li><a class="dropdown-item" href="#">Tallas</a></li>
+                        </ul>   
+                    </li>
+                </ul>  
+            </nav>
         </div>
+
+        <div class="titulo">
+            <h1>VENTA DE ROPA LA PAZ</h1>
+        </div>
+
+        <section>
+            <div class="contenedorprinci">
+                <!-- Columna de Imágenes -->
+                <div class="imagenes">
+                    <div class="c1">
+                        <img src="fotos/modeloenca4.png" alt="Vista 1">
+                    </div>
+                    <div class="c1">
+                        <img src="fotos/rojo.png" alt="Vista 2">
+                    </div>
+                    <div class="c1">
+                        <img src="fotos/modeloencaalre4.png" alt="Vista 3">
+                    </div>
+                    <div class="c1">
+                        <img src="fotos/modeloropaalrevez2.png" alt="Vista 4">
+                    </div>
+                </div>
+
+                <!-- Columna de Detalles -->
+                <div class="letras">
+                    <div class="letraa">
+                        <p><b>Camisacos Leñador con frisa <br>de color plomo con negro</b></p>
+                    </div>
+                    
+                    <div class="precios">
+                        <p>Bs 195.00</p>
+                        <p>Descuento a 180 Bs por chamarra a partir de 3 unidades</p>
+                    </div>
+
+                    <div class="sutalla">
+                        <p>Seleccione su talla:</p>
+                    </div>
+                    
+                    <div class="tallas">
+                        <div class="s"><button type="button" class="talla" data-talla="M"><b>M</b></button></div>
+                        <div class="m"><button type="button" class="talla" data-talla="L"><b>L</b></button></div>
+                        <div class="l"><button type="button" class="talla" data-talla="XL"><b>XL</b></button></div>
+                        <div class="xl"><button type="button" class="talla" data-talla="XXL"><b>XXL</b></button></div>
+                    </div>
+
+                    <div class="compra">
+                        <button id="botonde">Añadir al carrito</button>
+                    </div>
+
+                    <div id="contador-compras">
+                        <p>Cantidad: <span id="cantidad">0</span></p>
+                        <p>Talla: <span id="tipo">-</span></p>
+                        <p>Total: <span>Bs <span id="total">0</span></span></p>
+                    </div>
+
+                    <div style="display: flex; gap: 15px; align-items: center; width: 100%;">
+                        <a href="formulario.html" id="linkConfirmar">
+                            <div class="confir"><p>Confirmar Compra</p></div>
+                        </a>
+                        <button id="btnAceptar" style="display:none;">Aceptar</button>
+                    </div>
+                </div>
+            </div>
         </section>
-        <br>
-        <br>
-        <footer>
-        <div class="abjo">
-        <p>© 2026 VENTA DE ROPA LA PAZ - Bolivia</p>
-        <p>Tel: +591 73509394</p>
-        <a href="politica y privacidad.html">Política de privacidad</a><br>
-        <a href="Termino y condiciones.html">Términos y condiciones</a><br>
-        <a href="Politica de envios.html">Politica de envios</a>
-        </div>
+        
+        <br><br>
+        
+
+        <a href="https://wa.me/59173509394" class="whatsapp-float" target="_blank" rel="noopener">
+            <img src="fotos/logog.jpg" alt="WhatsApp"> 
+        </a>
+        <footer class="py-5 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h3 class="mb-4">
+                            NÓRDICO
+                        </h3>
+                        <p class="text-muted">
+                            Simulación de tienda de ropa virtual para proyecto final de la materia de Programación web.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-6 mb-md-0">
+                        <h5 class="mb-4">Sobre nosotros</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="polPrivacidad.html" class="text-muted text-decoration-none">Política de privacidad</a></li>
+                            <li class="mb-2"><a href="polTerminos.html" class="text-muted text-decoration-none">Términos y condiciones</a></li>
+                            <li class="mb-2"><a href="polEnvios.html" class="text-muted text-decoration-none">Política de envios</a></li>
+                            <li class="mb-2"><a href="polDevolucion.html" class="text-muted text-decoration-none">Política de devolución</a></li>
+                            <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Tel: 591 73509394</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h5 class="mb-4">Hoja informativa</h5>
+                        <p class="text-muted mb-3">Suscríbete para recibir ofertas especiales y novedades.</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Tu email" id="footerEmailInput">
+                            <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#suscripcionModal">
+                                <i class="bi bi-paper-plane"></i> Suscribirse
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4 bg-secondary">
+
+                <div class="text-center text-muted">
+                    <p class="mb-0">© 2026 Nórdico. Todos los derechos reservados.</p>
+                </div>
+            </div>
         </footer>
+
+        <!-- ================= MODALES ================= -->
+        
+        <!-- Modal Inicio de Sesión -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="ejemplo@correo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPassword" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="inputPassword" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-dark">Ingresar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <p class="mb-0">¿No tienes cuenta? <a href="#" class="text-primary">Regístrate aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Compra Rápida -->
+        <div class="modal fade" id="compraModal" tabindex="-1" aria-labelledby="compraModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="compraModalLabel">Finalizar Compra</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="tallaSelect" class="form-label">Selecciona tu talla</label>
+                                <select class="form-select" id="tallaSelect" required>
+                                    <option value="" selected disabled>Elige una talla...</option>
+                                    <option value="S">Small (S)</option>
+                                    <option value="M">Medium (M)</option>
+                                    <option value="L">Large (L)</option>
+                                    <option value="XL">Extra Large (XL)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cantidadInput" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" id="cantidadInput" min="1" value="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccionInput" class="form-label">Dirección de envío</label>
+                                <textarea class="form-control" id="direccionInput" rows="2" placeholder="Tu dirección completa..." required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Método de pago</label>
+                                <select class="form-select" required>
+                                    <option value="qr">Pago con QR</option>
+                                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                                    <option value="efectivo">Efectivo contra entrega</option>
+                                </select>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-success">Confirmar Pedido</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Suscripción -->
+        <div class="modal fade" id="suscripcionModal" tabindex="-1" aria-labelledby="suscripcionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-warning">
+                        <h5 class="modal-title text-dark" id="suscripcionModalLabel"><i class="bi bi-star-fill"></i> ¡Únete a NÓRDICO!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Completa tus datos para recibir las mejores ofertas y cupones exclusivos directamente en tu bandeja de entrada.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                            </div>
+                            <div class="form-check text-start mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="terminosCheck" required>
+                                <label class="form-check-label" for="terminosCheck">
+                                    Acepto los términos y condiciones.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100">Suscribirme ahora</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ================= SCRIPTS ================= -->
+        <script src="js/componentes.js"></script>
+        <script src="js/lema.js"></script>
         <script src="js/zoom.js"></script>
     </body>
 </html>
