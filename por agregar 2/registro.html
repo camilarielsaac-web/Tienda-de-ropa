@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>login</title>
+        <link rel="stylesheet" href="style/regis.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-container">
+                <form class="sign" id="formulario1">
+                    <h2>Iniciar Sesion</h2>
+                    <div class="social">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <ion-icon name="logo-youtube"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-tiktok"></ion-icon>
+                    </div>
+                    <span>Use su contraseña</span>
+                    <div class="container-input">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input id="login-email" type="text" name="correo" placeholder="Correo Electronico">
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input id="login-password" type="password" name="contraseña" placeholder="Contraseña">
+                    </div>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <div id="error1"></div>
+                    <button type="submit" class="boton">Iniciar Sesion</button>
+                    <div id="login-alert" class="alert"></div>
+                </form>
+            </div>
+            <div class="form-container">
+                <form class="sign-out" id="formulario2">
+                    <h2>Registrarse</h2>
+                    <div class="social">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        <ion-icon name="logo-youtube"></ion-icon>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        <ion-icon name="logo-tiktok"></ion-icon>
+                    </div>
+                    <span>Use su correo electronico para registrarse</span>
+                    <div class="container-input">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input id="register-name" type="text" name="nombre" placeholder="Usuario">
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input id="register-email" type="text" name="correo" placeholder="Correo Electronico">
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input id="register-password" type="password" name="contraseña" placeholder="Contraseña">
+                    </div>
+                    <div id="error2"></div>
+                    <button type="submit" class="boton">Registrarse</button>
+                    <div id="register-alert" class="alert"></div>
+                </form>
+            </div>
+            <div class="recta">
+                <div class="welcome-1 we">
+                        <h3>Bienvenido</h3>
+                        <p>Ingrese sus datos personales para continuar</p>
+                        <button class="boton" id="btn-sign-out">Registrarse</button>
+                </div>
+                <div class="welcome-2 we">
+                    <h3>Hola</h3>
+                    <p>Registre sus datos personales para continuar</p>
+                    <button type="button" class="boton" id="btn-sign">Iniciar Sesion</button>
+                </div>
+            </div>
+                
+        </div>
+        
+        <script src="js/regi.js"></script>
+        <script  type = "module"  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " > </script> 
+        <script nomodule src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js " >   </script>
+    </body>
+    </html>
