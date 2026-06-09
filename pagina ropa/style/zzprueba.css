@@ -1,3 +1,4 @@
+/*no borrar este o se volvera un menu pequeño*/
 .mega-menu {
     position: static;
 }
@@ -7,28 +8,28 @@
     position: absolute;
     left: 0;
     width: 100%;
-    background: white;
+    background: #2d2d2d;
+    border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    box-shadow: 0 5px 15px rgba(255, 242, 0, 0.2);
     z-index: 1000;
 }
-
 .mega-menu:hover .mega-menu-content {
     display: block;
+    transition: width 0.3s ease;
 }
-
 .mega-menu-content h5 {
     font-weight: bold;
     margin-bottom: 15px;
+    padding-top: 10px;
 }
-
-.mega-menu-content a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    margin-bottom: 8px;
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
 }
-
-.mega-menu-content a:hover {
-    color: #0d6efd;
+.navbar-nav .nav-item {
+    white-space: nowrap;
 }
