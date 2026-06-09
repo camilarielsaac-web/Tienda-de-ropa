@@ -1,0 +1,385 @@
+# GUÍA DIARIA DE TRABAJO CON GIT Y GITHUB EN UN PROYECTO GRUPAL
+
+=================================================
+ANTES DE EMPEZAR A TRABAJAR
+===========================
+
+Objetivo:
+
+* Tener la rama actualizada.
+* Evitar conflictos innecesarios.
+* Trabajar siempre sobre la versión más reciente del proyecto.
+
+1. Abrir la terminal y ubicarse en el proyecto
+
+cd ruta/del/proyecto
+
+Ejemplo:
+
+cd C:\Proyectos\SistemaVentas
+
+o
+
+cd ~/Proyectos/SistemaVentas
+
+2. Verificar en qué rama estoy
+
+git branch
+
+La rama actual aparecerá con un asterisco (*)
+
+Ejemplo:
+
+* feature/login
+  develop
+  main
+
+Si no estás en tu rama de trabajo:
+
+git checkout nombre-rama
+
+Ejemplo:
+
+git checkout feature/login
+
+3. Obtener los cambios más recientes del repositorio remoto
+
+git fetch origin
+
+Este comando NO modifica tus archivos.
+Solo descarga información actualizada del servidor.
+
+4. Actualizar la rama principal del proyecto
+
+Si el equipo trabaja sobre develop:
+
+git checkout develop
+
+git pull origin develop
+
+Si trabajan sobre main:
+
+git checkout main
+
+git pull origin main
+
+5. Volver a tu rama de trabajo
+
+git checkout feature/login
+
+6. Incorporar los cambios recientes de la rama principal
+
+Si usan develop:
+
+git merge develop
+
+Si usan main:
+
+git merge main
+
+Alternativa más avanzada:
+
+git rebase develop
+
+o
+
+git rebase main
+
+NOTA:
+Para principiantes suele ser más seguro usar merge.
+
+7. Verificar que no existan conflictos
+
+git status
+
+Si aparece:
+
+working tree clean
+
+Todo está correcto.
+
+=================================================
+DURANTE EL TRABAJO
+==================
+
+Objetivo:
+
+* Realizar cambios de forma ordenada.
+* Hacer commits pequeños y descriptivos.
+* Guardar avances frecuentemente.
+
+1. Revisar el estado del proyecto
+
+git status
+
+Esto muestra:
+
+* Archivos modificados
+* Archivos nuevos
+* Archivos eliminados
+
+2. Realizar modificaciones en el código
+
+Editar los archivos necesarios.
+
+3. Revisar los cambios realizados
+
+git diff
+
+Muestra exactamente qué cambió.
+
+4. Agregar archivos al área de preparación
+
+Agregar un archivo específico:
+
+git add archivo.ext
+
+Ejemplo:
+
+git add src/Login.js
+
+Agregar todos los cambios:
+
+git add .
+
+5. Verificar qué será incluido en el commit
+
+git status
+
+6. Crear un commit
+
+git commit -m "Implementa validación de credenciales"
+
+Buenas prácticas:
+
+✅ "Corrige error de autenticación"
+✅ "Agrega formulario de registro"
+✅ "Refactoriza componente usuario"
+
+Evitar:
+
+❌ "cambios"
+❌ "update"
+❌ "arreglos"
+
+7. Seguir trabajando
+
+Repetir el ciclo:
+
+Modificar
+↓
+git add .
+↓
+git commit -m "mensaje descriptivo"
+
+Es mejor realizar varios commits pequeños que uno gigante.
+
+=================================================
+SI NECESITAS TRAER CAMBIOS DEL EQUIPO DURANTE EL DÍA
+====================================================
+
+1. Guardar tu trabajo
+
+git add .
+git commit -m "Trabajo parcial"
+
+2. Actualizar rama principal
+
+git checkout develop
+
+git pull origin develop
+
+3. Volver a tu rama
+
+git checkout feature/login
+
+4. Integrar cambios
+
+git merge develop
+
+o
+
+git rebase develop
+
+5. Resolver conflictos si aparecen
+
+Buscar secciones similares a:
+
+<<<<<<< HEAD
+
+Tu código
+
+=======
+
+Código remoto
+
+> > > > > > > develop
+
+Editar manualmente.
+
+Luego:
+
+git add .
+
+git commit
+
+Si usaste rebase:
+
+git rebase --continue
+
+=================================================
+ANTES DE TERMINAR EL DÍA
+========================
+
+Objetivo:
+
+* Dejar todo respaldado en GitHub.
+* Evitar perder trabajo.
+
+1. Revisar cambios pendientes
+
+git status
+
+2. Crear commit final del día
+
+git add .
+
+git commit -m "Finaliza implementación del módulo login"
+
+3. Subir cambios a GitHub
+
+git push origin feature/login
+
+Ejemplo:
+
+git push origin feature/login
+
+4. Verificar que el push fue exitoso
+
+Debe aparecer algo similar a:
+
+To github.com:usuario/repositorio.git
+abc123..def456
+feature/login -> feature/login
+
+=================================================
+SI ES MOMENTO DE CREAR UN PULL REQUEST
+======================================
+
+1. Asegurarse de que la rama está actualizada
+
+git checkout develop
+git pull origin develop
+
+git checkout feature/login
+git merge develop
+
+2. Subir la última versión
+
+git push origin feature/login
+
+3. Entrar a GitHub
+
+4. Crear Pull Request
+
+feature/login
+↓
+develop
+
+o
+
+feature/login
+↓
+main
+
+según la estrategia del equipo.
+
+5. Esperar revisión del código
+
+=================================================
+COMANDOS MÁS UTILIZADOS
+=======================
+
+Ver estado:
+
+git status
+
+Ver ramas:
+
+git branch
+
+Cambiar de rama:
+
+git checkout nombre-rama
+
+Crear rama:
+
+git checkout -b nueva-rama
+
+Actualizar información remota:
+
+git fetch origin
+
+Descargar cambios:
+
+git pull origin develop
+
+Agregar cambios:
+
+git add .
+
+Crear commit:
+
+git commit -m "mensaje"
+
+Subir cambios:
+
+git push origin nombre-rama
+
+Ver historial:
+
+git log --oneline
+
+Ver diferencias:
+
+git diff
+
+Fusionar ramas:
+
+git merge develop
+
+Rebase:
+
+git rebase develop
+
+=================================================
+RUTINA DIARIA RECOMENDADA (RESUMEN)
+===================================
+
+INICIO DEL DÍA
+
+1. git fetch origin
+2. git checkout develop
+3. git pull origin develop
+4. git checkout feature/login
+5. git merge develop
+
+TRABAJO NORMAL
+
+1. Modificar código
+2. git add .
+3. git commit -m "mensaje"
+
+REPETIR DURANTE EL DÍA
+
+1. git status
+2. git add .
+3. git commit -m "mensaje"
+
+FINAL DEL DÍA
+
+1. git add .
+2. git commit -m "mensaje final"
+3. git push origin feature/login
+
+Con esto el trabajo queda respaldado en GitHub y sincronizado con el equipo.

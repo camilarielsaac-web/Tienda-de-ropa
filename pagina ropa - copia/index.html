@@ -15,13 +15,6 @@
         <!--css  hoja de estilos-->
             <link rel="stylesheet" href="style/hoja de estilos1.css">
             <link rel="stylesheet" href="style/componentes.css">
-
-        <!--tipografias-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:wght@283&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-
-
             
         </head>
         <body>
@@ -31,22 +24,22 @@
                 </div>
             </header>
            <!--Barra de navegación que se mueve, se repite en las paginas-->
-
+             <!--<div class="sticky-top" id="navbar-container"></div>-->
             <div class="sticky-top">
                 <nav class="navbar navbar-expand-lg mi-navbar">
                     <div class="container-fluid">
-                    <div class="row w-100">
+                    <div class="row w-100 align-items-center">
                         <!--boton de busqueda-->
                         <div class="col-2 d-flex justify-content-center">
                             <!-- pa el scritorio -->
                             <form class="d-none d-lg-flex " role="search">
-                                <button class="btn btn-outline-light" type="submit">
+                                <button class="btn btn-outline-success" type="submit">
                                     <i class="bi bi-search"></i>
                                 </button>
-                                <input class="form-control me-2" type="search" placeholder="Buscar">
+                                <input class="form-control me-2" type="search" placeholder="Search">
                             </form>
                             <!-- pa celular -->
-                            <button class="btn d-lg-none btn-outline-light " type="button" id="btnSearch">
+                            <button class="btn d-lg-none p-0" type="button" id="btnSearch">
                                 <i class="bi bi-search"></i>
                             </button>
                              <!--pa que el boton de lupita funcione :)-->
@@ -54,7 +47,7 @@
                             type="search"
                             class="form-control d-lg-none d-none search-mobile"
                             id="mobileSearch"
-                            placeholder="Producto"
+                            placeholder="Search"
                             >
                         </div>
                         <div class="col-2">
@@ -71,24 +64,31 @@
                         </div>
                         
                         <!--opciones-->
-                        <div class="col-4 text-end opc">
-                            
-                            <div class="navbar-collapse justify-content-end" id="navbarNavDropdown">
-                                <ul class="navbar-nav dropdown-menu-end">
+                        <div class="col-4 text-end">
+                            <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="#" role="button">
-                                        <i class="bi bi-person-circle" style="font-size: 24px;"></i></a>
+                                    <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-person-circle" style="font-size: 24px;"></i></a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="bi bi-cart" style="font-size: 25px;"></i>
+                                        <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-subtract" style="font-size: 25px;"></i>
                                     </a>
-                                    <ul class="dropdown-menu dropdown-menu-end">
+                                    <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Cupones</a></li>
                                         <li><a class="dropdown-item" href="#">Black Friday</a></li>
                                         <li><a class="dropdown-item" href="#">Extras</a></li>
                                     </ul>
-                                
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bi bi-bell-fill" style="font-size: 25px;"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bi bi-receipt" style="font-size: 25px;"></i></a>
+                                    </li>
                                     
                                 </ul>
                             </div>
@@ -97,109 +97,55 @@
                     </div>
                 </nav>
                 <!-- barra de navegcion-->
-                <nav class="navbar navbar-expand-lg" style="background-color:#2d2d2d">
-                    <div class="container-fluid">
-
-                        <ul class="navbar-nav mx-auto">
-                  <!--opcion1-->
-                            <li class="nav-item dropdown mega-menu">
-
-                                <a class="nav-link dropdown-toggle mi-menu" href="#">
-                                    EQUIPAJE
-                                </a>
-
-                                <div class="mega-menu-content">
-
-                                    <div class="row">
-
-                                        <div class="col-md-3">
-                                            <h5 class="dropdown-item">GÉNERO</h5>
-                                            <a class="dropdown-item"href="Catalogo1.html#hombre">Hombre</a>
-                                            <a class="dropdown-item"href="Catalogo1.html#mujer">Mujer</a>
-                                        
-                                        </div>
-
-
-                                        <div class="col-md-3">
-                                            <h5 class="dropdown-item">OCASIÓN</h5>
-                                            <a class="dropdown-item"href="Catalogo1.html#casual">Casual</a>
-                                            <a class="dropdown-item"href="Catalogo1.html#oficina">Oficina</a>
-                                            <a class="dropdown-item"href="Catalogo1.html#viaje">Viaje</a>
-                                            <a class="dropdown-item"href="Catalogo1.html#deportivo">Deportivo</a>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <h5 class="dropdown-item">COLECCIONES</h5>
-                                            <a class="dropdown-item" href="Catalogo1.html#nuevos1">Nuevos</a>
-                                            <a class="dropdown-item" href="Catalogo1.html#promocion1">Promoción</a>
-                                            <a  class="dropdown-item"href="Catalogo1.html#masvendidos1">Más vendidos</a>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <img class="dropdown-item" src="fotos/1prueba.jpg"
-                                                class="img-fluid rounded"
-                                                alt="Producto"
-                                                style="width:200px; height:150px;">
-                                                
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </li>
-                            <!--opcion1-->
-                            <li class="nav-item dropdown mega-menu">
-
-                                <a class="nav-link dropdown-toggle mi-menu" href="#">
-                                    ROPA
-                                </a>
-
-                                <div class="mega-menu-content">
-
-                                    <div class="row">
-
-                                        <div class="col-md-3">
-                                            <h5 class="dropdown-item">GÉNERO</h5>
-                                            <a class="dropdown-item"href="Catalogo1.html#hombre">Hombre</a>
-                                            <a class="dropdown-item"href="Catalogo1.html#mujer">Mujer</a>
-                                            <a class="dropdown-item"href="#">Niño</a>
-                                            <a class="dropdown-item"href="#">Niña</a>
-                                        </div>
-
-
-                                        <div class="col-md-3">
-                                            <h5 class="dropdown-item">OCASIÓN</h5>
-                                            <a class="dropdown-item"href="Catalogo1.html#casual">Casual</a>
-                                            <a class="dropdown-item"href="Catalogo1.html#oficina">Oficina</a>
-                                            <a class="dropdown-item"href="Catalogo1.html#viaje">Viaje</a>
-                                            <a class="dropdown-item"href="Catalogo1.html#deportivo">Deportivo</a>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <h5 class="dropdown-item">COLECCIONES</h5>
-                                            <a class="dropdown-item" href="Catalogo1.html#nuevos1">Nuevos</a>
-                                            <a class="dropdown-item" href="Catalogo1.html#promocion1">Promoción</a>
-                                            <a  class="dropdown-item"href="Catalogo1.html#masvendidos1">Más vendidos</a>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <img class="dropdown-item" src="fotos/1prueba.jpg"
-                                                class="img-fluid rounded"
-                                                alt="Producto"
-                                                style="width:200px; height:150px;">
-                                                
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
+                <nav sticky-top>
+                <ul class="menu" style="color:aliceblue">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">
+                            SACOS
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Color</a></li>
+                        <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                        <li><a class="dropdown-item" href="#">Tallas</a></li>
+                    </ul>    
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">
+                            CAMISAS</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Color</a></li>
+                        <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                        <li><a class="dropdown-item" href="#">Tallas</a></li>
+                    </ul>    
+                    </li><li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">
+                            VESTIDOS
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Color</a></li>
+                        <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                        <li><a class="dropdown-item" href="#">Tallas</a></li>
+                    </ul>    
+                    </li><li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">
+                            MOCHILAS
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Color</a></li>
+                        <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                        <li><a class="dropdown-item" href="#">Tallas</a></li>
+                    </ul>    
+                    </li><li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mi-menu" href="#">
+                            MEDIAS
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Color</a></li>
+                        <li><a class="dropdown-item" href="#">Ofertas</a></li>
+                        <li><a class="dropdown-item" href="#">Tallas</a></li>
+                    </ul>    
+                    </li>
+                </ul>  
                 </nav>
             </div>
                         
@@ -244,7 +190,7 @@
 
             <section class="nautica">
                 <div class="titulom">
-                    <h1>Ofertas de la semana</h1>
+                    <h1>Ofertas</h1>
                 </div>
                 <div class="contenedor">
                     <div class="eso">
@@ -325,7 +271,7 @@
                             <p class="text-muted mb-3">Suscríbete para recibir ofertas especiales y novedades.</p>
                             <div class="input-group">
                                 <input type="email" class="form-control" placeholder="Tu email">
-                                <button class="btn btn-secondary" type="button">
+                                <button class="btn btn-warning" type="button">
                                     <i class="bi bi-paper-plane"></i>
                                 </button>
                             </div>

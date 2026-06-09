@@ -1,0 +1,55 @@
+body {
+    background-color: #f5f7f8;
+}
+
+.legal {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+}
+.legal h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+}
+.legal .fecha {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+    font-family: "Manrope", serif;
+}
+.legal section {
+    margin-bottom: 25px;
+}
+.legal h2 {
+    color: gray;
+    border-bottom: 2px solid gray;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 1;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+}
+.legal p {
+    color: rgb(0, 0, 0);
+    line-height: 1.7;
+    text-align: justify;
+    font-size: 1rem;
+    font-family: "Manrope", sans-serif;
+}
+.legal ul {
+    margin-left: 20px;
+    line-height: 1.7;
+}
+.legal li {
+    color: rgb(0, 0, 0);
+    line-height: 1.7;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-family: "Manrope", sans-serif;
+}

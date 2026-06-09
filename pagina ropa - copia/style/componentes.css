@@ -1,57 +1,17 @@
-/*el mega menu son las configuraciones de la barra inferior de navbar YA FUNCIONA ASI QUE NO TOCAR NADA!*/
-
-.mega-menu {
-    position: static;
-}/*no borrar este o se volvera un menu pequeño*/
-.mega-menu-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background: #2d2d2d;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(255, 242, 0, 0.2);
-    z-index: 1000;
-}
-.mega-menu:hover .mega-menu-content {
-    display: block;
-    transition: width 0.3s ease;
-}
-.mega-menu-content h5 {
-    font-weight: bold;
-    margin-bottom: 15px;
-    padding-top: 10px;
-}
-.navbar-nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    overflow-x: auto;
-}
-.navbar-nav .nav-item {
-    white-space: nowrap;
-}
-/*el mega menu son las configuraciones de la barra inferior de navbar*/
-
-
-
-
 nav{
     font-family: "Cossette Texte", sans-serif;
 }
 nav ul{
-    background-color:#2d2d2d;
+    background-color:#66b6ab;
     list-style: none;
     padding:0;
     margin:0;
-    border-bottom:2px solid rgb(255, 255, 255);
+    border-bottom:2px solid aliceblue;
     display: flex;
     justify-content: center;
 }
 nav li{
-    margin:0;
+    margin:0 15px;
 }
 nav a {
     text-decoration: none;
@@ -60,7 +20,7 @@ nav a {
     display: block;
 }
 nav a:hover{
-    background-color: #2d2d2d;
+    background-color: #66b6ab;
     transition: all 0.3s ease-in-out;
 }
 
@@ -75,36 +35,29 @@ height:auto;
 }
 
 .navbar-nav {
-    gap: 0;
-    overflow-x: clip;
-    /*ese clip evita que se mueva raro al cambiar de opciones, NO TOCAR*/
+    gap: 0.5rem;
 }
 
 .navbar-nav .nav-link {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    padding-top: 5px;
-    padding-bottom: 10px;
     font-size: 0.95rem;
-}
-.navbar-nav li {
-    flex: 0 0 auto;
+    
 }
 .mi-navbar{
-    background-color: #2d2d2d;
-    border-bottom: 2px solid #2d2d2d;
+    background-color: #66b6ab;
+    border-bottom: 2px solid #66b6ab;
 }
 .mi-navbar .nav-link,
 .mi-navbar .navbar-brand{
     color: white;
 }
 
-/*para que el espacio de búsqueda se vea bomnito*/
 @media (min-width: 992px) {
     .form-control {
         background: transparent;
         border: none;
-        border-bottom: 1px solid rgb(255, 255, 255);
+        border-bottom: 1px solid white;
         border-radius: 0;
         box-shadow: none;
         transition: all 0.3s ease;
@@ -127,25 +80,21 @@ height:auto;
     z-index: 2000;
     margin-top: 8px;
 
-    box-shadow: 0 8px 20px white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     border-radius: 10px;
 }
 
-/*para que se vea bien al cambiar pasar el mouse*/
+
 .mi-menu:hover{
-    color: rgb(222, 223, 223);
-    background-color: #2d2d2d;
-    transition: all 0.5s ease;
-    transform: scale(1.15);
-   
+color: rgb(222, 223, 223);
+background-color: #66b6ab;
+transition: all 0.5s ease;
+ transform: scale(1.15);
 }
 .mi-menu {
     position: relative;
-    border-bottom: 2px solid rgb(0, 0, 0) ;  
-    color: white !important;
-    padding-left: 15px;
-    padding-right: 15px;
 }
+
 .mi-menu::after {
     content: "";
     position: absolute;
@@ -155,19 +104,21 @@ height:auto;
     height: 2px;
     transition: width 0.3s ease;
 }
+
 .mi-menu:hover::after {
     width: 100%;
 }
 
 
-/*pa que funcione el menu desplegable, NO TOCAR!*/
+
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 .dropdown-menu {
-    background-color: #2d2d2d;
+    background-color: #7cc9bf;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25)
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    
 }
 .dropdown-item {
     color: white;
@@ -175,7 +126,7 @@ height:auto;
     transition: all 0.3s ease;
 }
 .dropdown-item:hover {
-    background-color: #2d2d2d!important;
+    background-color: #7cc9bf!important;
     color: white;
      transform: translateY(-5px);
 }
@@ -209,7 +160,7 @@ height:auto;
 footer{
     bottom: 0%;
     font-family: "Cossette Texte", sans-serif;
-     background-color: #363636;
+     background-color: #112c28;
     color: white !important;
     display: flex;
     flex-direction: column;
@@ -222,10 +173,12 @@ footer a{
     padding: 0 ;
 }
 footer a:link{
-    color:#d0d0d0  !important;
+    color:aliceblue !important;
 }
-
+footer a:visited{
+    color:#fffec7 !important;
+}
 footer .text-muted{
-    color: #d0d0d0 !important;
+    color: #d9d9d9 !important;
 }
 
