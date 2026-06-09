@@ -1,8 +1,8 @@
-/*el mega menu son las configuraciones de la barra inferior de navbar*/
-/*no borrar este o se volvera un menu pequeño*/
+/*el mega menu son las configuraciones de la barra inferior de navbar YA FUNCIONA ASI QUE NO TOCAR NADA!*/
+
 .mega-menu {
     position: static;
-}
+}/*no borrar este o se volvera un menu pequeño*/
 .mega-menu-content {
     display: none;
     position: absolute;
@@ -77,7 +77,7 @@ height:auto;
 .navbar-nav {
     gap: 0;
     overflow-x: clip;
-    /*ese clip evita que se mueva raro al cambiar de opciones*/
+    /*ese clip evita que se mueva raro al cambiar de opciones, NO TOCAR*/
 }
 
 .navbar-nav .nav-link {
@@ -160,7 +160,7 @@ height:auto;
 }
 
 
-
+/*pa que funcione el menu desplegable, NO TOCAR!*/
 .dropdown:hover .dropdown-menu {
     display: block;
 }
