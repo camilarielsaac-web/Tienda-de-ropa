@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/1078a7f824.js" crossorigin="anonymous"></script>
+        <title>login</title>
+        <link rel="stylesheet" href="style/formulario.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-container" id="formas">
+                <form id="formulario">
+                    <h2>Ingrese sus datos</h2>
+                    <span>Ingrese sus datos personales para continuar</span>
+                    <div class="container-input" id="delNombre">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input class="input" type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" >
+                        
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input class="input" type="text" id="correo" name="correo" placeholder="Correo Electronico" >
+                          
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <input class="input" type="text" id="domi" name="domi" placeholder="indique su domicilio" >
+                             
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <input class="input" type="text" id="celular" name="celular" placeholder="Numero de Celular" >
+                        
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="id-card-outline"></ion-icon>
+                        <input class="input" type="text" id="CI" name="carnet" placeholder="Carnet de identidad" >
+                          
+                      </div>
+                    <div class="error" id="error">
+                      <ion-icon class="validacion" name="close-outline"></ion-icon>
+                    </div>
+                </form>
+            </div>
+            <div class="form-container" >
+                <form class="sign-out" id="formulario2">
+                    <h2>Ingrese sus datos de la terjeta de preferencia</h2>
+                    <span>Use su tarjeta de credito de preferencia para rellenar los datos</span>
+                    <div class="container-input" id="grupo">
+                        <ion-icon name="card-outline"></ion-icon>
+                        <input class="input" type="text" id="numeroT" name="numero" placeholder="N* de tarjeta">
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input class="input" type="text" id="fechade" name="fecha" placeholder="Fecha de vencimiento" >
+                    </div>
+                    <div class="container-input">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input class="input" type="password" id="codigode" name="codigo" placeholder="Codigo de Seguridad" >
+                    </div>
+                    <button type="submit" class="boton">Comprar</button>
+                    <div class="error1" id="error1">
+                      <ion-icon class="validacion" name="close-outline"></ion-icon>
+                    </div>
+                </form>
+            </div>
+            <div class="recta">
+                <div class="welcome-1 we">
+                        <h3>Metodo de pago</h3>
+                        <p>Seleccione un metodo de pago disponible</p>
+                        <button class="boton" id="btn-sign-out">Seleccionar</button>
+                </div>
+                <div class="welcome-2 we">
+                    <h3>Hola</h3>
+                    <p>¿Necesita cambiar los datos personales?</p>
+                    <button class="boton" id="btn-sign">Cambiar</button>
+                </div>
+            </div>
+                
+        </div>
+        
+        <script src="js/nc.js"></script>
+        <script  type = "module"  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " > </script> 
+    </body>
+    </html>
